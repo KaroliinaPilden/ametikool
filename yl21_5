@@ -1,0 +1,6 @@
+SELECT ROUND(SUM(price), 2) AS Summa, YEAR (order_date) AS Aasta
+FROM TAK18_Pilden.yl21_Orders
+LEFT JOIN TAK18_Pilden.yl21_Books
+ON TAK18_Pilden.yl21_Books.id=TAK18_Pilden.yl21_Orders.book_id
+GROUP BY YEAR(order_date)
+ORDER BY order_date ASC;
