@@ -1,0 +1,5 @@
+SELECT *
+FROM TAK18_Pilden.yl21_Books
+WHERE (SELECT AVG(price)
+FROM TAK18_Pilden.yl21_Books)<price
+ORDER BY price DESC;
